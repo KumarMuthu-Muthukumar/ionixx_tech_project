@@ -1,4 +1,5 @@
 import uuid
+#initializing lists to store the datas
 bus=[]
 agent=[]
 booked_tickets=[]
@@ -17,7 +18,7 @@ while (True):
             total_seat=int(input("total_seat:"))
             price=eval(input("price:"))
             bus_id=str(uuid.uuid4())
-            instance={
+            bus_details={
                 "busname":busname,
                 "From":From,
                 "To":To,
@@ -26,21 +27,21 @@ while (True):
                 "bus_id":bus_id,
                 "available_seat":total_seat
             }
-            print(instance)
-            bus.append(instance)
+            print(bus_details)
+            bus.append(bus_details)
         elif choice2==2:
             agent_name=input("agent_name:")
             mobile_number=input("mobile_number:")
             password=input("password:")
             agent_code=str(uuid.uuid4())
-            instance={
+            agent_details={
                 "agent_name":agent_name,
                 "mobile_number":mobile_number,
                 "password":password,
                 "agent_code":agent_code
             }
-            print(instance)
-            agent.append(instance)
+            print(agent_details)
+            agent.append(agent_details)
         elif choice2==3:
             continue
     elif (choice1==2):
